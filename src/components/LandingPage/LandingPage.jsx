@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import '../../index.css';
 import Navbar from '../Navbar'; 
 import KnowledgeAnimate from '../../images/knowledge-animate[1].svg'; 
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const [lightMode, setLightMode] = useState(true); 
@@ -19,7 +20,7 @@ const LandingPage = () => {
           <p>
             Join a thriving community to exchange books and discover new literary adventures.
           </p>
-          <button className="explore-btn">Explore More</button>
+          <button className="explore-btn"><Link to ="/register">Explore More</Link></button>
         </div>
         <div className="svg-container">
           <img src={KnowledgeAnimate} alt="Knowledge Animate" />

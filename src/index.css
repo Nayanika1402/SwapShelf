@@ -4,5 +4,119 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: inherit;
+}
 
+.light-mode {
+  background-color: #F0F8FA;
+  color: #333;
+  min-height: 100vh; /* Ensure the background covers the whole page */
+}
 
+.dark-mode {
+  background-color: #2E3A46;
+  color: #EEE;
+  min-height: 100vh; /* Ensure the background covers the whole page */
+}
+
+.navbar {
+  background-color: inherit; /* Change to inherit the background color based on the mode */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Make sure the navbar covers the full width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for better visibility */
+}
+
+.toggle-mode-btn, .login-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.login-btn:hover, .toggle-mode-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add a hover effect */
+}
+
+.signup-btn, .explore-btn {
+  background-color: #00C3C3;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: inherit;
+  flex-direction: row; /* Ensure the text and image are side by side */
+  min-height: calc(100vh - 68px); /* Ensure the section covers the remaining height of the page */
+}
+
+.main-content {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  font-family: 'Montserrat', sans-serif; /* Change the font to something more attractive */
+}
+
+.svg-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.svg-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Roboto', sans-serif; /* Change to a different font family */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-mode-btn {
+  margin-left: 20px;
+}
+
+.main-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif; /* Apply the attractive font */
+}
+
+.main-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif; /* Apply the attractive font */
+}
+
+.explore-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #2EFFE5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}

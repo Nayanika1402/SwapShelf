@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage/LandingPage"
 import Login from './components/Auth/Login';
 import Register from "./components/Auth/Register";
 import OTP from "./components/Auth/OTP.jsx";
+import Feed from "./components/Home/Feed.jsx";
 
  
 
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
        <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<LandingPage />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="/otp/:userId" element={<OTP />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

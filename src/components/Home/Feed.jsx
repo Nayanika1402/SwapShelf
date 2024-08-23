@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import postImage from '../../images/ShortStory.png'
+import userImage from "../../images/Avatar.png"
+import Navbar from '../Navbar';
 
 const Feed = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,88 +15,88 @@ const Feed = () => {
       timestamp: '2 hours ago',
       content: 'This is a preview of the post content...',
       image:postImage,
-      userImage: 'https://via.placeholder.com/50',
+      userImage: userImage,
       description: 'This is a detailed description of the post.',
     },
 
     {
         id: 2,
-        username: '@johndoe',
+        username: '@mortal',
         timestamp: '2 hours ago',
-        content: 'This is a preview of the post content...',
+        content: '#story',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
 
       {
         id: 3,
-        username: '@johndoe',
+        username: '@sandyrocks',
         timestamp: '2 hours ago',
-        content: '#Poet',
+        content: '#Poem',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
       
       {
         id: 4,
-        username: '@johndoe',
+        username: '@julius',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
       {
-        id: 4,
-        username: '@johndoe',
+        id: 5,
+        username: '@enimes',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
       {
-        id: 4,
-        username: '@johndoe',
+        id: 6,
+        username: '@mobasir',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
       {
-        id: 4,
-        username: '@johndoe',
+        id: 7,
+        username: '@Ishowspeed',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
       {
-        id: 4,
-        username: '@johndoe',
+        id: 8,
+        username: '@deadpool',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
       {
-        id: 4,
-        username: '@johndoe',
+        id: 9,
+        username: '@wolverine',
         timestamp: '2 hours ago',
         content: 'This is a preview of the post content...',
         image: postImage,
-        userImage: 'https://via.placeholder.com/50',
+        userImage: userImage,
         description: 'This is a detailed description of the post.',
       },
 
@@ -109,22 +111,21 @@ const Feed = () => {
   });
 
   return (
-    <div className="feed-section p-4">
-      {/* New Post Input */}
-
-
-      <div className="search-filter-bar mb-4 flex space-x-4 items-center">
+    <><Navbar />
+    <h1 className='text-4xl font-semibold items-center justify-center mt-5 mb-10 ml-[80vh] '>Literatural <span className='text-cyan-300'>Post</span></h1>
+    <div className="feed-section p-4 ">
+    
+      <div className="search-filter-bar mb-10 flex space-x-4 ">
         <input
           type="text"
           placeholder="Search posts..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="search-bar flex-grow p-2 border border-gray-300 rounded"
-        />
+          className="search-bar flex-grow p-2 border border-gray-300 rounded-2xl" />
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="sort-by p-2 border border-gray-300 rounded"
+          className="sort-by p-2 border border-gray-300 rounded-2xl"
         >
           <option value="date">Sort by Date</option>
           <option value="popularity">Sort by Popularity</option>
@@ -133,7 +134,7 @@ const Feed = () => {
         <select
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
-          className="category-filter p-2 border border-gray-300 rounded"
+          className="category-filter p-2 border border-gray-300 rounded-2xl"
         >
           <option value="all">All Categories</option>
           <option value="tech">Technology</option>
@@ -143,15 +144,14 @@ const Feed = () => {
       </div>
 
       {/* Posts Feed */}
-      <div className="posts-feed grid grid-cols-3 gap-2">
+      <div className="posts-feed grid grid-cols-4 justify-between gap-2">
         {filteredPosts.map((post) => (
-          <div key={post.id} className="post-card border border-gray-300 rounded p-3 w-[50vh]  mx-auto">
+          <div key={post.id} className="post-card border border-gray-300 rounded-2xl p-3 w-[48vh]  mx-auto ">
             <div className="user-info flex items-center mb-2">
               <img
                 src={post.userImage}
                 alt="User Profile"
-                className="profile-pic w-8 h-8 rounded-full mr-2"
-              />
+                className="profile-pic w-8 h-8 rounded-full mr-2"/>
               <div>
                 <span className="username font-bold text-sm">{post.username}</span>
                 <span className="timestamp text-xs text-gray-500 ml-2">{post.timestamp}</span>
@@ -163,7 +163,7 @@ const Feed = () => {
             </div>
             {post.image && (
               <div className="post-media mb-2">
-                <img src={post.image} alt="Post Media" className="rounded w-[50vh] h-[20vh]" />
+                <img src={post.image} alt="Post Media" className="rounded w-[48vh] h-[15vh]" />
               </div>
             )}
             {post.description && (
@@ -171,7 +171,7 @@ const Feed = () => {
                 <p className="text-gray-700 text-sm">{post.description}</p>
               </div>
             )}
-            <div className="post-actions flex space-x-6 p-3 ml-8">
+            <div className="post-actions flex space-x-6 p-3 ml-10">
               <button className="like-btn text-red-500 text-sm">❤️ Like</button>
               <button className="share-btn text-blue-500 text-sm">🔗 Share</button>
               <button className="comment-btn text-green-500 text-sm">💬 Comment</button>
@@ -179,7 +179,7 @@ const Feed = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div></>
   );
 };
 

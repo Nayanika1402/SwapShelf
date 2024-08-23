@@ -4,7 +4,7 @@ import Login from './components/Auth/Login';
 import Register from "./components/Auth/Register";
 import OTP from "./components/Auth/OTP.jsx";
 import Feed from "./components/Home/Feed.jsx";
-import Category from "./components/books/category.jsx";
+import Category from "./components/books/Category.jsx";
 
  
 

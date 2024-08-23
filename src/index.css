@@ -21,7 +21,6 @@ body {
   color: #EEE;
   min-height: 100vh; /* Ensure the background covers the whole page */
 }
-
 .navbar {
   background-color: inherit; /* Change to inherit the background color based on the mode */
   padding: 1rem;
@@ -32,7 +31,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for better visibility */
 }
 
-.toggle-mode-btn, .login-btn {
+.toggle-mode-btn, .login-btn, .post-btn, .books-btn, .home-btn, .newp-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -41,7 +40,7 @@ body {
   border-radius: 4px;
 }
 
-.login-btn:hover, .toggle-mode-btn:hover {
+.login-btn:hover, .toggle-mode-btn:hover, .post-btn:hover, .books-btn:hover, .home-btn:hover, .newp-btn:hover  {
   background-color: rgba(255, 255, 255, 0.1); /* Add a hover effect */
 }
 
@@ -119,3 +118,66 @@ body {
   border: none;
   border-radius: 4px;
 }
+/* index.css */
+
+.custom-footer {
+  background-color: #fff; /* White background */
+  padding: 60px 0;
+  font-family: 'Arial', sans-serif; /* Adjust font as necessary */
+}
+
+.custom-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-footer h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.custom-footer p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-footer .footer-socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.custom-footer .footer-socials a {
+  margin: 0 10px;
+  background-color: #1a1a1a; /* Dark background for icons */
+  padding: 10px;
+  border-radius: 50%;
+  color: #2EFFE5; /* Gold icon color */
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-footer .footer-socials a:hover {
+  background-color: #2EFFE5; /* Hover background color */
+  color: #1a1a1a; /* Hover icon color */
+}
+
+.custom-footer .footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.custom-footer .footer-bottom p {
+  font-size: 14px;
+  color: #777;
+}
+

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Navbar from '../Navbar';
 import CategorySection from './CategorySection';
 import thinkingFastAndSlow from '../../images/bookfeed.png';
-
+import Footer from '../Footer';
 
 // Sample data for categories and books
 const categories = [
@@ -39,7 +39,9 @@ function Category() {
   return (
    <>
    <Navbar/>
-   <h1 className='text-4xl font-semibold items-center justify-center mt-5 mb-10 ml-[80vh] '>Book<span className='text-cyan-300'> Gallery</span></h1>
+   <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mt-5 mb-10'>
+  Book<span className='text-cyan-300'> Gallery</span>
+</h1>
     
       <div className="search-filter-bar mb-10 flex space-x-4 p-5 ">
         <input
@@ -72,6 +74,7 @@ function Category() {
         <CategorySection key={index} title={category.title} books={category.books} />
       ))}
     </div>
+    <Footer />
     </>
   );
 }

@@ -1,8 +1,9 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import '../../index.css';
 import Navbar from '../Navbar'; 
 import KnowledgeAnimate from '../../images/knowledge-animate[1].svg'; 
 import { Link } from 'react-router-dom';
+import Footer from '../Footer';  // Import the Footer component
 
 const LandingPage = () => {
   const [lightMode, setLightMode] = useState(true); 
@@ -26,6 +27,7 @@ const LandingPage = () => {
           <img src={KnowledgeAnimate} alt="Knowledge Animate" />
         </div>
       </header>
+      <Footer lightMode={lightMode} />  {/* Add the Footer component */}
     </div>
   );
 };

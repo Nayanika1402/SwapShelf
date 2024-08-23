@@ -4,6 +4,7 @@ import Login from './components/Auth/Login';
 import Register from "./components/Auth/Register";
 import OTP from "./components/Auth/OTP.jsx";
 import Feed from "./components/Home/Feed.jsx";
+import Category from "./components/books/category.jsx";
 
  
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/otp/:userId" element={<OTP />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/books" element={<Category />} />
       
       </Routes>
       </BrowserRouter>
